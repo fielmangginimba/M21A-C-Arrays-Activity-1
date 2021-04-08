@@ -1,0 +1,33 @@
+// C program that adds all the array elements and prints the sum using recursion
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    // Function declaration
+    int array[10], count, i;
+    int sum, num;
+
+    // Inputtin size in array
+    printf("Enter size of the Array: ");
+    scanf("%d", &count);
+
+    //Sets Array size limit (5 - 10)
+    if (count < 5 || count > 10) {
+        printf("Invalid Entry\n");
+    } else {
+        //Array Loop, scans how many count.
+        for (i = 0, num = 1, sum = 0; i < count; num++, i++) {
+            printf("Element %d in the array: ", num);
+            scanf("%d", &array[i]);
+            sum += array[i];
+            //Adds all element entered
+        }
+
+        //Print total of all array element
+        printf("Sum of all array elements: %d\n", sum);
+
+    }
+
+    return 0;
+}
